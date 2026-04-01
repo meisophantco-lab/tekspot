@@ -1,0 +1,271 @@
+:root{
+    --primary: rgb(79, 79, 210);
+    --theme:  mediumpurple;
+}
+
+.logo{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#logo{
+    text-decoration: none;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme) transparent;
+}
+
+body{
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.main{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header{
+    background: linear-gradient(to right, var(--theme), var(--primary));
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    justify-content: space-between;
+    width: 97%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: 5s;
+    justify-self: center;
+    padding: 5px;
+}
+
+header:hover{
+    background: linear-gradient(to left, var(--theme), var(--primary));
+}
+
+header h1{
+    color: white;
+}
+
+/* Overlay background */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 8;
+  display: none;
+}
+
+.nav-overlay.show {
+  display: block;
+}
+
+/* Ensure nav appears above overlay */
+.nav {
+  z-index: 10;
+}
+
+.nav { display: flex; gap: 15px; }
+
+.nav a { 
+  color: white; 
+  text-decoration: none; 
+  font-weight: 500;
+}
+
+.nav a:hover{
+    color: rgb(184, 184, 212);
+}
+
+.menu-btn { 
+  display: none; 
+  font-size: 28px; 
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+      .nav { 
+        display: none; 
+        flex-direction: column; 
+        background: linear-gradient(to right, var(--theme), var(--primary)); 
+        position: absolute; 
+        top: 60px; 
+        right: 0; 
+        width: 200px; 
+        padding: 20px; 
+        border-radius: 8px; 
+        transition: 5s;
+    }
+
+    .nav:hover{
+        background: linear-gradient(to left, var(--theme), var(--primary));
+    }
+      
+    .nav.show { 
+        display: flex; 
+    }
+
+      .menu-btn {
+         display: block; 
+        }
+}
+
+.start-learning{
+     margin-left: auto;
+     margin-right: auto;
+     text-decoration: none;
+     background: linear-gradient(to right, var(--theme), var(--primary));
+     width: calc(100% - 25%);
+     height: 30px;
+     padding: 20px;
+     border-radius: 22px;
+     margin-bottom: 12px;
+     color: white;
+     cursor: pointer;
+     transition: 1.5s;
+     margin: auto;
+}
+
+.start-learning:hover{
+    background: linear-gradient(to left, var(--theme), var(--primary));
+    color: black;
+}
+
+.content a{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+img{
+    width: calc(70%);
+    height: calc(80%);
+    border-radius: 22px;
+    box-shadow: 5px 5px 15px rgba(0, 0 ,0, 0.8);
+    transition: .3s;
+}
+
+img:hover{
+    transform:translateY(-6px);
+}
+
+.padding{
+    padding: 90px;
+}
+
+.padding-2{
+    padding: 40px;
+}
+
+#join-the-pride{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.main{
+    height: max-content;
+    width: calc(95%);
+    border-radius: 12px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+     color: #777;
+     margin: 40px auto;
+     padding: 20px;
+     background-color: #f9f9f9;
+     border: 1px solid #ddd;
+     box-shadow: 0 0 10px rgba(0,0,0,.1);
+     border-radius: 12px;
+     width: calc(100% - 5%);
+     text-align: center;
+     transition: 1.5s;
+}
+
+footer:hover{
+    transform: translateY(-6px);
+}
+
+.course-outline{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    height: max-content;
+    width: calc(80%);
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0 ,0, 0.8);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lesson{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    height: max-content;
+    width: calc(89%);
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0 ,0, 0.8);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lesson h4{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+pre{
+    width: calc(89%);
+    height: max-content;
+    overflow: scroll;
+    background-color: black;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border: 3px 3px 5px solid linear-gradient(to left, var(--theme), var(--primary));
+    box-shadow: 12px 10px 35px rgba(0, 0 ,0, 0.8);
+}
+
+#note{
+    color: grey;
+}
+
+.note{
+    color: red;
+}
+
+.example{
+    text-decoration: underline;
+}
+
+.lesson a{
+    color: var(--primary);
+    text-decoration: none;
+}
