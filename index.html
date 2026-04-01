@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TekSpot By Meisophant</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+            <h1 class="logo">
+                <a href="./index.html" id="logo">TekSpot</a>
+            </h1>
+            <br><br>
+            <div class="menu-btn" id="menuBtn">☰</div>
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="#startLearning">Start Learning</a>
+                <a href="#donate">Donate</a>
+            </nav>
+        </header>
+        <div class="padding"></div>
+        <img src="./assets/img/favicon.png" alt="TekSpot Logo">
+        <div class="padding-2"></div>
+        <div class="main">
+            <section id="join-the-pride">
+                <div class="content">
+                    <h1>
+                        About TekSpot
+                    </h1>
+                    <p>
+                        TekSpot is a web-app built by <a href="https://meisophant.name.ng"
+                            target="_blank" rel="noopener"><b>Meisophant Digital Services</b></a> with the aim and purpose of
+                        educating, empowering and teaching, and enlightening youths, and future tech innovators more
+                        about technology(coding & programming), and also how to earn with tech(programming). Meisophant
+                        Digital Services is one of the most trusted brand in the whole world that is developer-focused,
+                        and it was founded by Adewale Emmanuel Oluwajomiloju, who is still the CEO and Owner till date.
+                        <br><br>
+                        For More Information about Meisophant Digital Services, visit their <a
+                            href="https://meisophant.name.ng" target="_blank" rel="noopener"><b>Official Website</b></a> or <a
+                            href="mailto:info@misophant.name.ng" target="_blank" rel="noopener"><strong>Send A Mail Directly to
+                                them</strong></a>
+                    </p>
+                    <div class="padding-2"></div>
+                </div>
+            </section>
+            <a href="#startLearning" class="start-learning">
+                Start Learning
+            </a>
+            <div class="padding-2"></div>
+        </div>
+        <div class="padding-2"></div>
+        <div class="main">
+            <section id="startLearning">
+                <div class="content">
+                    <h1>
+                        Start Learning
+                    </h1>
+                    <p>
+                        Join other developers as they learn about programming technology
+                        <br><br><br>
+                        <strong>What You Gain After This Course:</strong>
+                        <br>
+                    <ul>
+                        <li>More Knowledge and information about HTML</li>
+                        <li>More Knowledge and information about CSS</li>
+                        <li>A little bit of knowledge about JavaScript</li>
+                        <li>How to host your own website</li>
+                        <li>How to monetize your site</li>
+                        <li>How to connect your own custom domain</li>
+                        <li>A Certificate Of Completion Of Course</li>
+                    </ul>
+                    </p>
+                    <div class="padding-2"></div>  
+            </section>
+            <a href="./start-learning/" class="start-learning">Join Now</a>
+            <div class="padding-2"></div>
+            </div>
+        </div>
+        <div class="padding-2"></div>
+        <div class="main">
+            <section id="donate">
+                <div class="content">
+                    <h1>
+                        Donate
+                    </h1>
+                    <p>
+                    <p>
+                        Do you want to support <a href="https://meisophant.name.ng" target="_blank" rel="noopener"><b>Meisophant Digital
+                                Services</b></a> in the development
+                        of <b>TekSpot</b>? Then you are on the right spot.
+                    </p>
+                    </p>
+                    <div class="padding-2"></div>
+                    <a href="">
+                        <button class="start-learning">
+                            Donate
+                        </button>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="padding"></div>
+        <footer>
+            &copy;Copyright, Meisophant Digital Services, 2026
+        </footer>
+        <script>
+            const menuBtn = document.getElementById("menuBtn");
+            const navMenu = document.getElementById("navMenu");
+
+            menuBtn.addEventListener("click", () => {
+                navMenu.classList.toggle("show");
+                menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+            });
+        </script>
+</body>
+
+</html>
 
