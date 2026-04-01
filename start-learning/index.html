@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Learning | TekSpot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="../../index.html" id="logo">TekSpot</a>
+        </h1>
+        <br><br>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav class="nav" id="navMenu">
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="padding"></div>
+    <div class="lesson">
+        <h2>
+            What You Need To Start This Course
+        </h2>
+        <br>
+        <ol>
+            <li>Visual Studio Code(Or Your Preffered Code Editor)</li>
+            <li>Your personal PC(Personal Computer)</li>
+            <li>A Stable Internet Connection</li>
+        </ol>
+    </div>
+    <div class="padding-2"></div>
+    <div class="course-outline">
+        <h1>Course Outline</h1>
+        <ol>
+            <li>Introduction to HTML</li>
+            <li>How to make a website?</li>
+            <li>Creating a simple "My Webpage" website</li>
+            <li>Introduction to CSS</li>
+            <li>Styling the "My Webpage"</li>
+            <li>Introduction to JavaScript</li>
+            <li>Scripting the "My Webpage" Website</li>
+            <li>Introduction to GitHub</li>
+            <li>Hosting the "My Webpage" Website</li>
+            <li>Introduction to Domains</li>
+            <li>Purchasing Domain and connect to GitHub Site</li>
+            <li>sitemap.xml</li>
+            <li>Introduction to "Search Console" and "Webmaster"</li>
+            <li>Submitting the "My Webpage Website to Search Engines</li>
+            <li>Adding Keywords to Website</li>
+            <li>Introduction to Monetization</li>
+            <li>Monetizing the My Webpage Site</li>
+            <li>Monetizing through Paystack / Flutterwave</li>
+        </ol>
+        <div class="padding-2"></div>
+        <a href="./intro-to-html/index.html" class="start-learning">
+            Start Course
+        </a>
+        <div class="padding-2"></div>
+    </div>
+
+    <footer>
+        &copy;Copyright, Meisophant Digital Services, 2026
+    </footer>
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
+
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+            menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+        });
+    </script>
+</body>
+
+</html>
