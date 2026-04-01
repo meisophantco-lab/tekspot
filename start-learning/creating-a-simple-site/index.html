@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating A Simple Portfolio Website</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="../../index.html" id="logo">TekSpot</a>
+        </h1>
+        <br><br>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav class="nav" id="navMenu">
+            <a href="../../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="padding"></div>
+    <a href="../how-to-make-a-website/index.html">
+        <button class="start-learning">
+            Previous Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <div class="lesson">
+        <h1>
+            Creating A Portfolio WebSite
+        </h1>
+        <p>
+            In this lesson, we are going to be learning how to make a portfolio website.
+            <br><br>
+        <pre>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+
+                        &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;!-- Step 16: Adding Keywords to site --&gt;
+                        &lt;meta name="keywords" content="Web Developer, TekSpot Student, Portfolio, Digital Business Hub"&gt;
+                        &lt;meta name="description" content="My professional digital business card created via TekSpot."&gt;
+                        &lt;title&gt;My Webpage | TekSpot Project&lt;/title&gt;
+                        &lt;link rel="stylesheet" href="style.css"&gt;
+                        &lt;/head&gt;
+
+                        &lt;body&gt;
+
+                        &lt;div class="container"&gt;
+                        &lt;!-- Step 4: Creating a simple "My Webpage" website --&gt;
+                        &lt;header&gt;
+                        &lt;div class="profile-img"&gt;ME&lt;/div&gt;
+                        &lt;h1&gt;[Your Name]&lt;/h1&gt;
+                        &lt;p&gt;Aspiring Developer | TekSpot Student&lt;/p&gt;
+                        &lt;/header&gt;
+
+                        &lt;main&gt;
+                        &lt;div class="links"&gt;
+                        &lt;a href="#" class="link-card"&gt;My Projects&lt;/a&gt;
+                        &lt;a href="#" class="link-card"&gt;Contact Me&lt;/a&gt;
+                        &lt;a href="#" class="link-card"&gt;Instagram&lt;/a&gt;
+                        &lt;!-- Step 17: Introduction to Monetization (Placeholder) --&gt;
+                        &lt;a href="#" class="link-card premium"&gt;Hire My Services&lt;/a&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Step 8: Scripting the button --&gt;
+                        &lt;button id="shareBtn"&gt;Copy My Profile Link&lt;/button&gt;
+                        &lt;/main&gt;
+
+                        &lt;footer&gt;
+                        &lt;p&gt;&copy; 2024 Built with TekSpot by Meisophant&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;script src="script.js"&gt;&lt;/script&gt;
+                        &lt;/body&gt;
+
+                        &lt;/html&gt;
+                    </pre>
+        </p>
+        <div class="padding-2"></div>
+        <div class="body">
+            <style>
+                .body {
+                    font-family: sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    width: calc(100% - 7%);
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #f4f4f9;
+                    border-radius: 22px;
+                }
+
+                .tag-box {
+                    background: white;
+                    border-left: 5px solid #00d2ff;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+
+                code {
+                    background: #e0e0e0;
+                    padding: 2px 5px;
+                    border-radius: 3px;
+                    font-family: monospace;
+                    color: #d63384;
+                }
+
+                .comment {
+                    color: #6a9955;
+                    font-style: italic;
+                }
+
+                h2 {
+                    color: #1e1e2f;
+                    border-bottom: 2px solid #00d2ff;
+                    display: inline-block;
+                }
+
+                .footer {
+                    text-align: center;
+                    margin-top: 50px;
+                    color: #888;
+                }
+            </style>
+
+
+            <h2>1. The "Setup" Tags</h2>
+            <div class="tag-box">
+                <p><code>&lt;!DOCTYPE html&gt;</code>: This tells the browser, "Hey, I am using the latest version of
+                    HTML
+                    (HTML5)."</p>
+                <p><code>&lt;html lang="en"&gt;</code>: This is the container for everything. The <code>lang="en"</code>
+                    helps
+                    Google know your site is in English.</p>
+                <p><code>&lt;head&gt;</code>: This is the <strong>"Brain"</strong> of the site. Users don't see this
+                    part, but
+                    it contains the title, the CSS links, and the SEO keywords.</p>
+            </div>
+
+            <h2>2. The "SEO" Section (Step 15)</h2>
+            <div class="tag-box">
+                <p><code>&lt;meta name="keywords"&gt;</code>: These are the words you want Google to associate with you.
+                    When
+                    someone searches for "Web Developer," this tag helps them find you.</p>
+            </div>
+
+            <h2>3. The "Body" (What Users See)</h2>
+            <div class="tag-box">
+                <p><code>&lt;header&gt;</code>: Used for your "Identity." We put your profile picture and name here.</p>
+                <p><code>&lt;div class="container"&gt;</code>: Think of a <code>&lt;div&gt;</code> like an empty box. We
+                    use it
+                    to group things together so we can style them with CSS later.</p>
+                <p><code>&lt;a href="#"&gt;</code>: This is an <strong>Anchor Tag</strong>. It creates a link. The
+                    <code>#</code> is a placeholder until you have a real URL.
+                </p>
+            </div>
+
+            <h2>4. The "Action" (Step 7)</h2>
+            <div class="tag-box">
+                <p><code>&lt;button id="shareBtn"&gt;</code>: This creates a clickable button. We give it an
+                    <strong>ID</strong>
+                    so that our JavaScript can find it and tell it what to do when clicked.
+                </p>
+            </div>
+
+            <h2>5. Linking the Scripts</h2>
+            <div class="tag-box">
+                <p><code>&lt;link rel="stylesheet" href="style.css"&gt;</code>: This connects your design (CSS) to your
+                    structure (HTML).</p>
+                <p><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>: This connects your logic (JavaScript). We
+                    put it
+                    at the bottom so the website loads the words first and the "brain" last.</p>
+            </div>
+
+            <div class="footer">
+                <p>Ready for Step 4? Let's start styling with CSS!</p>
+                <p><strong>- AEO, Founder of Meisophant</strong></p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="padding-2"></div>
+    <a href="../intro-to-css/index.html">
+        <button class="start-learning">
+            Next Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <footer>
+        &copy;Copyright, Meisophant Digital Services, 2026
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+
+</html>
