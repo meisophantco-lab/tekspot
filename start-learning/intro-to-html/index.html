@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="../../index.html" id="logo">TekSpot</a>
+        </h1>
+        <br><br>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav class="nav" id="navMenu">
+            <a href="../../../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="padding"></div>
+    <div class="lesson">
+        <h1>
+            Introduction to HTML
+        </h1>
+        HTML( Hypertext Markup Language ) is the Language that is used to write the contents of a webpage. HTML is the
+        standard markup file for creating webpages. It is the standard language used for documents to be displayed in a
+        web browser. It describes the structure and content of a webpage. It is often assisted by technologies such as
+        Cascading Style Sheet(CSS) and scripting languages such as JavaScript.
+        <br><br>
+        The code below is an example of a basic HTML code.
+        <br><br>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+               &lt;meta charset="UTF-8"&gt;
+               &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+               &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        <div class="padding-2"></div>
+        <a href="../how-to-make-a-website/index.html">
+            <button class="start-learning">
+                Next Lesson
+            </button>
+        </a>
+        <div class="padding-2"></div>
+    </div>
+    <footer>
+        &copy;Copyright, Meisophant Digital Services, 2026
+    </footer>
+    <script src="../../script.js"></script>
+    <script>
+        function myFunction() {
+            var copyText =
+                document.getElementById("myInput");
+
+            copyText.select();
+            copyText.setSelectionRange(0, 999999)
+            document.execCommand("copy")
+            alert("copied the text :" + copyText).value();
+        }
+    </script>
+</body>
+
+</html>
