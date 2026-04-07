@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripting The Portfolio Site</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="../../index.html" id="logo">TekSpot</a>
+        </h1>
+        <br><br>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav class="nav" id="navMenu">
+            <a href="../../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="padding"></div>
+    <a href="../intro-to-js/index.html">
+        <button class="start-learning">
+            Previous Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <div class="lesson">
+        <h1>Introduction To JavaScript</h1>
+        <p>
+            <br>
+            In this lesson, we are going to be teaching you JavaScript through example, so we are going to be scripting
+            the Portfolio Site we created earlier. So, in the same folder as your HTML file, create another file <span class="keyword">script.js</span>, and paste the below code into it.
+        </p>
+        <div class="padding-2"></div>
+        <pre>
+            // Step 6: Introduction to JavaScript
+            // Step 7: Scripting the button "My Webpage" site
+            
+            const shareBtn = document.getElementById('shareBtn');
+            
+            shareBtn.addEventListener('click', () => {
+            // This logic copies the current URL to the clipboard
+            const currentUrl = window.location.href;
+            
+            navigator.clipboard.writeText(currentUrl).then(() => {
+            // Change button text temporarily to show it worked
+            shareBtn.innerText = "Link Copied!";
+            shareBtn.style.backgroundColor = "#00d2ff";
+            shareBtn.style.color = "#1e1e2f";
+            
+            setTimeout(() => {
+            shareBtn.innerText = "Copy My Profile Link";
+            shareBtn.style.backgroundColor = "transparent";
+            shareBtn.style.color = "#00d2ff";
+            }, 2000);
+            });
+            });
+
+        </pre>
+        <div class="padding-2"></div>
+        <div class="body">
+            <style>
+                .body {
+                    font-family: 'Inter', -apple-system, sans-serif;
+                    line-height: 1.6;
+                    color: #f8f9fa;
+                    max-width: calc(100% - 2%);
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #0b0e14;
+                    border-radius: 22px;
+                }
+
+                .js-logic {
+                    background: #161b22;
+                    border-radius: 12px;
+                    padding: 25px;
+                    margin-bottom: 30px;
+                    border: 1px solid #30363d;
+                    position: relative;
+                }
+
+                .js-logic::before {
+                    content: "JS";
+                    position: absolute;
+                    top: -10px;
+                    right: 20px;
+                    background: #f7df1e;
+                    color: black;
+                    font-weight: bold;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-size: 0.8rem;
+                }
+
+                code {
+                    background: #0d1117;
+                    color: #ff7b72;
+                    padding: 4px 8px;
+                    border-radius: 6px;
+                    font-family: 'Fira Code', monospace;
+                    font-size: 0.9rem;
+                    border: 1px solid #30363d;
+                }
+
+                .keyword {
+                    color: #ff7b72;
+                }
+
+                .function {
+                    color: #d2a8ff;
+                }
+
+                .string {
+                    color: #a5d6ff;
+                }
+
+                h2 {
+                    color: #58a6ff;
+                    margin-bottom: 15px;
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+                h2::before {
+                    content: "⚡";
+                    margin-right: 10px;
+                }
+
+                .note {
+                    background: #23863633;
+                    border-left: 4px solid #238636;
+                    padding: 15px;
+                    border-radius: 0 8px 8px 0;
+                    margin-top: 15px;
+                    color: #79c0ff;
+                    font-size: 0.95rem;
+                }
+            </style>
+
+            <div class="js-logic">
+                <h2>1. Selecting the Element</h2>
+                <p><code><span class="keyword">const</span> shareBtn = document.<span class="function">getElementById</span>(<span class="string">'shareBtn'</span>);</code>
+                </p>
+                <p>JavaScript needs to "find" the HTML button before it can control it. We use the <strong>ID</strong>
+                    we
+                    created in
+                    Lesson 1 to grab the button and store it in a variable called <code>shareBtn</code>.</p>
+            </div>
+
+            <div class="js-logic">
+                <h2>2. Listening for the "Click"</h2>
+                <p><code>shareBtn.<span class="function">addEventListener</span>(<span class="string">'click'</span>, () => { ... });</code>
+                </p>
+                <p>This is like telling a guard: "Wait here, and the moment someone clicks this button, run the code
+                    inside
+                    these
+                    brackets." It’s an <strong>Event Listener</strong>.</p>
+            </div>
+
+            <div class="js-logic">
+                <h2>3. Accessing the Clipboard</h2>
+                <p><code>navigator.clipboard.<span class="function">writeText</span>(window.location.href);</code></p>
+                <p>This is a powerful browser tool. <code>window.location.href</code> gets your website's URL, and
+                    <code>writeText</code> "pastes" it into the user's computer memory automatically.
+                </p>
+                <div class="note"><strong>AEO's Insight:</strong> This is how "Modern Tech" works—making things easier
+                    for the
+                    user
+                    with just one click!</div>
+            </div>
+
+            <div class="js-logic">
+                <h2>4. The Visual Feedback (UI)</h2>
+                <p><code>shareBtn.innerText = <span class="string">"Link Copied!"</span>;</code></p>
+                <p>When the link is copied, we change the text on the button so the user knows it worked. This is called
+                    <strong>User Interface (UI) Feedback</strong>.
+                </p>
+            </div>
+
+            <div class="js-logic">
+                <h2>5. The Reset (setTimeout)</h2>
+                <p><code><span class="function">setTimeout</span>(() => { shareBtn.innerText = <span class="string">"Copy My Profile Link"</span>; }, <span class="keyword">2000</span>);</code>
+                </p>
+                <p>We don't want the button to say "Link Copied" forever. <code>setTimeout</code> tells the brain to
+                    wait for
+                    <strong>2000 milliseconds (2 seconds)</strong> and then change the text back to normal.
+                </p>
+            </div>
+
+            <footer
+                style="text-align: center; margin-top: 60px; border-top: 1px solid #30363d; padding-top: 30px; padding-bottom: 50px;">
+                <p style="color: #8b949e;"><strong>Great Job!</strong> You have now built a working, smart website.</p>
+                <p style="color: #58a6ff; font-weight: bold; margin-top: 10px;">Next Step: Introduction To GitHub</p>
+                <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Meisophant Digital Services |
+                    AEO</p>
+            </footer>
+
+        </div>
+    </div>
+    <div class="padding-2"></div>
+    <a href="../intro-to-github/index.html">
+        <button class="start-learning">
+            Next Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <footer>
+        &copy;Copyright, Meisophant Digital Services, 2026
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+
+</html>
