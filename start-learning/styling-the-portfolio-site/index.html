@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling the Portfolio WebSite</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="../../index.html" id="logo">TekSpot</a>
+        </h1>
+        <br><br>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav class="nav" id="navMenu">
+            <a href="../../index.html">Home</a>
+        </nav>
+    </header>
+    <div class="padding"></div>
+    <a href="../intro-to-css/index.html">
+        <button class="start-learning">
+            Previous Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <div class="lesson">
+        <h1>Styling The Portfolio WebSite</h1>
+        <p>
+            <br>
+            In this lesson we are going to be styling the markup file we created.
+            <br><br>
+        </p>
+        <ul>
+            <li>In the same folder your markup file is, create another file named <code>style.css</code>, and paste the
+                below code into it.</li>
+        </ul>
+        <div class="padding-2"></div>
+        <pre>
+                /* Step 4: Introduction to CSS - Basic Reset */
+                * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                
+                body {
+                background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 20px;
+                }
+                
+                .container {
+                text-align: center;
+                max-width: 400px;
+                width: 100%;
+                }
+                
+                .profile-img {
+                width: 80px;
+                height: 80px;
+                background: #00d2ff;
+                border-radius: 50%;
+                margin: 0 auto 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1.5rem;
+                }
+                
+                /* Step 5: Styling the "My Webpage" website */
+                .links {
+                margin-top: 30px;
+                }
+                
+                .link-card {
+                display: block;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                text-decoration: none;
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                transition: 0.3s;
+                border: 1px solid transparent;
+                }
+                
+                .link-card:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border-color: #00d2ff;
+                transform: scale(1.02);
+                }
+                
+                .premium {
+                background: #00d2ff;
+                color: #1e1e2f;
+                font-weight: bold;
+                }
+                
+                #shareBtn {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: transparent;
+                color: #00d2ff;
+                border: 1px solid #00d2ff;
+                border-radius: 5px;
+                cursor: pointer;
+                }
+        
+            </pre>
+        <div class="padding-2"></div>
+        <div class="body">
+            <style>
+                .body {
+                    font-family: 'Segoe UI', sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #f0f2f5;
+                    border-radius: 22px;
+                }
+
+                .css-rule {
+                    background: white;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-bottom: 25px;
+                    border-left: 8px solid #1e1e2f;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                }
+
+                code {
+                    background: #2d2d44;
+                    color: #f8f8f2;
+                    padding: 3px 8px;
+                    border-radius: 5px;
+                    font-family: 'Courier New', monospace;
+                    font-size: 0.95rem;
+                }
+
+                .property {
+                    color: #66d9ef;
+                    font-weight: bold;
+                }
+
+                .value {
+                    color: #a6e22e;
+                }
+
+                h2 {
+                    color: #1e1e2f;
+                    margin-bottom: 10px;
+                    font-size: 1.4rem;
+                }
+
+                .pro-tip {
+                    background: #fff3cd;
+                    border: 1px solid #ffeeba;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    font-style: italic;
+                    font-size: 0.9rem;
+                }
+
+                p {
+                    color: #666
+                }
+
+                .div {
+                    text-align: center;
+                    margin-top: 50px;
+                    padding-bottom: 50px;
+                }
+            </style>
+            <div class="css-rule">
+                <h2>1. The "Reset" (The * Selector)</h2>
+                <p><code>* { margin: 0; padding: 0; box-sizing: border-box; }</code></p>
+                <p>Browsers (Chrome, Safari, Edge) add their own weird spacing by default. This line "zeroes" everything
+                    out so
+                    <strong>you</strong> have total control over the layout.
+                </p>
+            </div>
+
+            <div class="css-rule">
+                <h2>2. The "Atmosphere" (Body Background)</h2>
+                <p><code>background: <span class="value">linear-gradient(135deg, #1e1e2f, #2d2d44);</span></code></p>
+                <p>Instead of a flat color, we use a <strong>Gradient</strong>. This makes the site look high-end and
+                    modern,
+                    matching the Meisophant tech aesthetic.</p>
+            </div>
+
+            <div class="css-rule">
+                <h2>3. Centering Magic (Flexbox)</h2>
+                <p><code>display: <span class="value">flex;</span> justify-content: <span class="value">center;</span> align-items: <span class="value">center;</span></code>
+                </p>
+                <p>In the old days, centering things was hard. With <strong>Flexbox</strong>, we tell the body to be a
+                    "Flex
+                    Container" and it perfectly centers our "Business Hub" right in the middle of the screen.</p>
+            </div>
+
+            <div class="css-rule">
+                <h2>4. The Profile Circle</h2>
+                <p><code>border-radius: <span class="value">50%;</span></code></p>
+                <p>Any square box can become a perfect circle by setting the border-radius to 50%. This is how we make
+                    professional-looking profile pictures.</p>
+            </div>
+
+            <div class="css-rule">
+                <h2>5. Interactivity (Hover Effects)</h2>
+                <p><code>.link-card:hover { transform: <span class="value">scale(1.02);</span> }</code></p>
+                <p>This is <strong>Step 6</strong> in action. When a user moves their mouse over a link, it grows
+                    slightly
+                    larger.
+                    This "feedback" tells the user the site is alive and responsive.</p>
+                <div class="pro-tip">Pro Tip: Always add <code>transition: 0.3s;</code> to make the movement smooth, not
+                    jumpy!
+                </div>
+            </div>
+
+            <div class="css-rule">
+                <h2>6. Transparency (RGBA)</h2>
+                <p><code>background: <span class="value">rgba(255, 255, 255, 0.1);</span></code></p>
+                <p>The "a" in RGBA stands for <strong>Alpha</strong> (transparency). This makes our link cards look like
+                    "Glassmorphism"—a popular design trend where elements look like frosted glass.</p>
+            </div>
+
+            <div class="div">
+                <hr>
+                <p><strong>Homework:</strong> Open your <code>style.css</code> and change the gradient colors to match
+                    your
+                    personal
+                    brand. Then, email your progress to <strong>info@meisophant.name.ng</strong>.</p>
+                <p><em>- AEO, CEO of Meisophant Digital Services</em></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="padding-2"></div>
+    <a href="../intro-to-js/index.html">
+        <button class="start-learning">
+            Next Lesson
+        </button>
+    </a>
+    <div class="padding-2"></div>
+    <footer>
+        &copy;Copyright, Meisophant Digital Services, 2026
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+
+</html>
